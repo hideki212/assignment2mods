@@ -1,4 +1,4 @@
-#include "calender.h"
+#include "calendar.h"
 #define NULL 0
 /*
     display calendar at m y
@@ -82,7 +82,7 @@ void startCalendar()
 
     int year, month, con = 1;
     while(con == 1){
-        printf("Enter the month and year: ");
+        printf("Enter the month 1 -12 and year 1970 - 2038: ");
         scanf("%d %d", &month, &year);
         if(month <= 12 && month >= 1){
             if(year <= 2038 && year >= 1970){

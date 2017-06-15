@@ -11,17 +11,6 @@
 
 int validate(char *a);
 
-
-int validate(char *a)
-{
-    unsigned x;
-    for (x = 0; x < strlen(a); x++)
-        if (!isdigit(a[x]))
-            return 1;
-
-    return 0;
-}
-
 int main()
 {
     int choice = 1, con = 1;
@@ -37,7 +26,6 @@ int main()
                 printf("Please chose a valid option\n\n1: Display the calendar of the month\n2: Calculator\n3: Find prime number from a list \n4: Find odd and even numbers from a list\n5: Find a minimum and maximum numbers from a list\n6: Exit the program\n\n");
             else if(rol > 0)
                 printf("1: Display the calendar of the month\n2: Calculator\n3: Find prime number from a list \n4: Find odd and even numbers from a list\n5: Find a minimum and maximum numbers from a list\n6: Exit the program\n\n");
-            
             buffer[strlen(buffer) - 1] = '\0';
             if (validate(buffer) == 0)
             {
@@ -82,6 +70,16 @@ int main()
 
         printf("\n");
     }
+}
+
+int validate(char *a)
+{
+    unsigned x;
+    for (x = 0; x < strlen(a); x++)
+        if (!isdigit(a[x]))
+            return 1;
+
+    return 0;
 }
 
 
